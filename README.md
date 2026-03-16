@@ -4,8 +4,8 @@
 > **주제:** 뇌 기전(Brain Mechanism)을 모방한 스피드 게임(몸으로 말해요) 에이전트 개발
 
 ## 프로젝트 소개
-이 프로젝트는 인간의 시각 정보 처리 경로인 **Two-Stream Hypothesis (Ventral & Dorsal Stream)**를 모방하여 개발된 AI 에이전트입니다.
-단순히 정지된 이미지를 인식하는 것을 넘어, **시간의 흐름에 따른 동작(Motion)**과 **맥락(Context)**을 파악하여 사용자의 제스처를 추론합니다.
+이 프로젝트는 인간의 시각 정보 처리 경로인 Two-Stream Hypothesis (Ventral & Dorsal Stream)를 모방하여 개발된 AI 에이전트입니다.
+단순히 정지된 이미지를 인식하는 것을 넘어, 시간의 흐름에 따른 동작(Motion)**과 **맥락(Context)을 파악하여 사용자의 제스처를 추론합니다.
 
 ##  핵심 기술 (Core Technology)
 
@@ -15,10 +15,10 @@
 * **Prefrontal Cortex (Decision):** 두 경로의 정보를 통합하고, 메모리 버퍼(Memory Buffer)를 통해 시간적 맥락을 고려하여 최종 정답을 판단합니다.
 
 ### 2. Real-time Hand Gesture Recognition (Interaction)
-> **역할:** 키보드나 마우스 없이, 손동작(숫자 1~9)만으로 게임 카테고리를 선택하거나 시스템을 제어하는 **비접촉 인터페이스(NUI)**를 구현했습니다.
+> **역할:** 키보드나 마우스 없이, 손동작(숫자 1~9)만으로 게임 카테고리를 선택하거나 시스템을 제어하는 비접촉 인터페이스(NUI)를 구현했습니다.
 
 * **Skeletal Analysis (MediaPipe):**
-    * 웹캠 영상에서 실시간으로 손의 **21개 관절 랜드마크(Keypoints)**를 추출합니다.
+    * 웹캠 영상에서 실시간으로 손의 21개 관절 랜드마크(Keypoints)를 추출합니다.
     * 배경 노이즈에 강건하도록 `x, y, z` 좌표를 정규화(Normalization)하여 처리합니다.
 * **Custom CNN Classifier:**
     * 추출된 63차원 좌표 벡터(21개 점 × 3축)를 입력으로 받는 경량화된 **CNN(Convolutional Neural Network)** 모델을 자체 적용했습니다.
